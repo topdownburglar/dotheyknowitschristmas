@@ -23,7 +23,7 @@ namespace Vevo
 
             int knows = they.Count(p => p.KnowsItsChristmas == true);
             int doesntknow = they.Count(p => p.KnowsItsChristmas == false);
-            int wedontknowiftheyknow = they.Count(p => p.KnowsItsChristmas == false);
+            int wedontknowiftheyknow = they.Count(p => p.KnowsItsChristmas == null);
             int total = they.Count;
 
             if (knows == total)
@@ -32,7 +32,6 @@ namespace Vevo
                 return;
             }
 
-            //Since there is at least one const (I'd like to be constant, not static, but I can't) 1, this is very unlikely.
             if (doesntknow == total)
             {
                 Console.WriteLine("They don't know.");
