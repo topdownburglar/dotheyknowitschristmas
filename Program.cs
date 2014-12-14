@@ -15,8 +15,6 @@ namespace Vevo
         static void Main(string[] args)
         {
             var they = new Them();
-
-
             AskThem(they);
             if (!they.Contains(Me)) //in case they didn't ask me.
                 they.Add(Me);
